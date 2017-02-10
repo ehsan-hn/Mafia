@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -27,6 +26,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     private int[] mIcon;
     private int[] spValue;
 
+
+    // Provide a suitable constructor (depends on the kind of dataset)
+    public MyAdapter(String[] myDataset, Context context, int[] icon) {
+        mDataset = myDataset;
+        mContext = context;
+        mIcon = icon;
+        spValue = new int[myDataset.length];
+    }
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -49,7 +56,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
                 android.R.layout.simple_spinner_item, list);
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         holder.mSpinner.setAdapter(dataAdapter);
-        holder.mSpinner.setSelection(0);
+        holder.mSpinner.setSelection(spValue[position]);
         holder.mSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
@@ -63,12 +70,15 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         });
 
     }
+
     public int getSpinnerValue(int i){
         return spValue[i];
     }
+
     public String getCharacterName(int i){
         return mDataset[i];
     }
+
     @Override
     public long getItemId(int i) {
         return 0;
@@ -78,8 +88,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     public int getItemCount() {
         return mDataset.length;
     }
-
-
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
@@ -99,14 +107,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             mDesc = (TextView) v.findViewById(R.id.item_desc);
         }
 
-    }
-
-    // Provide a suitable constructor (depends on the kind of dataset)
-    public MyAdapter(String[] myDataset, Context context , int[] icon) {
-        mDataset = myDataset;
-        mContext = context;
-        mIcon = icon;
-        spValue =new int[myDataset.length];
     }
 
 
