@@ -16,8 +16,9 @@ import java.util.List;
 
 public class GameFragment extends Fragment {
 
+    public static String CHARACTER_PARAM = "characters";
     String[] shakhsiatList={"شهروند","مافیا","دکتر",
-            "کارگاه","سایلنسر","اسنایپر",
+            "کارآگاه", "سایلنسر", "اسنایپر",
             "فراماسون","گادفادر","تروریست",
             "کشیش","جاسوس",
             "ساقی","کلانتر","افسونگر",
@@ -39,7 +40,6 @@ public class GameFragment extends Fragment {
             R.drawable.rointan,
             R.drawable.dozd
     };
-    public static String CHARACTER_PARAM ="characters";
     public GameFragment() {
         // Required empty public constructor
     }
