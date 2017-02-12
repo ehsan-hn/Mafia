@@ -17,10 +17,8 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by ehsan on 1/15/17.
- */
-public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
+
+public class GameAdapter extends RecyclerView.Adapter<GameAdapter.MyViewHolder> {
     private String[] mDataset;
     private Context mContext;
     private int[] mIcon;
@@ -28,7 +26,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public MyAdapter(String[] myDataset, Context context, int[] icon) {
+    public GameAdapter(String[] myDataset, Context context, int[] icon) {
         mDataset = myDataset;
         mContext = context;
         mIcon = icon;

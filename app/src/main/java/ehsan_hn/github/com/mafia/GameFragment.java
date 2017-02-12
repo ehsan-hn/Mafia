@@ -17,13 +17,13 @@ import java.util.List;
 public class GameFragment extends Fragment {
 
     public static String CHARACTER_PARAM = "characters";
-    String[] shakhsiatList={"شهروند","مافیا","دکتر",
+    public static String[] shakhsiatList = {"شهروند", "مافیا", "دکتر",
             "کارآگاه", "سایلنسر", "اسنایپر",
             "فراماسون","گادفادر","تروریست",
             "کشیش","جاسوس",
             "ساقی","کلانتر","افسونگر",
             "رویین تن","دزد"};
-    int[] characterIcon = {R.drawable.shahrvand,
+    public static int[] characterIcon = {R.drawable.shahrvand,
             R.drawable.mafia,
             R.drawable.doctor,
             R.drawable.kargah,
@@ -39,6 +39,24 @@ public class GameFragment extends Fragment {
             R.drawable.afsongar,
             R.drawable.rointan,
             R.drawable.dozd
+    };
+    public static int[] characterDesc = {
+            R.string.shahrvand,
+            R.string.mafia_desc,
+            R.string.doctor_desc,
+            R.string.karagah_desc,
+            R.string.faheshe_desc,
+            R.string.sniper_desc,
+            R.string.framason_desc,
+            R.string.goftaher_desc,
+            R.string.terorist_desc,
+            R.string.keshish_desc,
+            R.string.jasos_desc,
+            R.string.saghi_desc,
+            R.string.karagah_desc,
+            R.string.afsongar_desc,
+            R.string.robinTan_desc,
+            R.string.dozd_desc
     };
     public GameFragment() {
         // Required empty public constructor
@@ -63,10 +81,10 @@ public class GameFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_game, container, false);
-        RecyclerView rv = (RecyclerView) view.findViewById(R.id.rv);
+        RecyclerView rv = (RecyclerView) view.findViewById(R.id.game_rv);
 
 
-        final MyAdapter adapter = new MyAdapter(shakhsiatList,getContext(),characterIcon);
+        final GameAdapter adapter = new GameAdapter(shakhsiatList, getContext(), characterIcon);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getContext());
         rv.setLayoutManager(mLayoutManager);
         rv.setItemAnimator(new DefaultItemAnimator());

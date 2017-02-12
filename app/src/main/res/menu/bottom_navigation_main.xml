@@ -5,18 +5,18 @@
         android:id="@+id/game_item"
         android:enabled="true"
         android:icon="@drawable/ic_play_circle_outline_black_24dp"
-        android:title="بازی"
+        android:title="@string/game"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/character_item"
-        android:enabled="false"
+        android:enabled="true"
         android:icon="@drawable/ic_person_black_24dp"
-        android:title="شخصیت"
+        android:title="@string/character"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/learn_item"
         android:enabled="false"
         android:icon="@drawable/ic_local_library_black_24dp"
-        android:title="آموزش"
+        android:title="@string/learn"
         app:showAsAction="ifRoom" />
 </menu>
