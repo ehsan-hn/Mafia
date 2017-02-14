@@ -34,11 +34,17 @@ public class CharacterFragment extends Fragment {
         RecyclerView rv = (RecyclerView) view.findViewById(R.id.character_rv);
 
 
-        final CharacterAdapter adapter = new CharacterAdapter(getContext(), GameFragment.shakhsiatList, GameFragment.characterDesc, GameFragment.characterIcon);
+        final CharacterAdapter adapter = new CharacterAdapter(getActivity(), GameFragment.shakhsiatList, GameFragment.characterDesc, GameFragment.characterIcon);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getContext());
         rv.setLayoutManager(mLayoutManager);
         rv.setItemAnimator(new DefaultItemAnimator());
         rv.setAdapter(adapter);
+        rv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
         return view;
     }
 
