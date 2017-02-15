@@ -88,7 +88,7 @@ public class GameFragment extends Fragment {
         RecyclerView rv = (RecyclerView) view.findViewById(R.id.game_rv);
 
 
-        final GameAdapter adapter = new GameAdapter(shakhsiatList, getContext(), characterIcon);
+        final GameAdapter adapter = new GameAdapter(shakhsiatList, getActivity(), characterIcon);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getContext());
         rv.setLayoutManager(mLayoutManager);
         rv.setItemAnimator(new DefaultItemAnimator());

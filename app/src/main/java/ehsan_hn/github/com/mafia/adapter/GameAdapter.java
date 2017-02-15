@@ -1,6 +1,8 @@
 package ehsan_hn.github.com.mafia.adapter;
 
-import android.content.Context;
+import android.graphics.Color;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -17,19 +19,22 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
 
+import ehsan_hn.github.com.mafia.MainActivity;
 import ehsan_hn.github.com.mafia.R;
+import ehsan_hn.github.com.mafia.fragment.CharacterDetail;
+import ehsan_hn.github.com.mafia.fragment.GameFragment;
 import ehsan_hn.github.com.mafia.utility.CircleTransform;
 
 
 public class GameAdapter extends RecyclerView.Adapter<GameAdapter.MyViewHolder> {
     private String[] mDataset;
-    private Context mContext;
+    private FragmentActivity mContext;
     private int[] mIcon;
     private int[] spValue;
 
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public GameAdapter(String[] myDataset, Context context, int[] icon) {
+    public GameAdapter(String[] myDataset, FragmentActivity context, int[] icon) {
         mDataset = myDataset;
         mContext = context;
         mIcon = icon;
@@ -67,6 +72,19 @@ public class GameAdapter extends RecyclerView.Adapter<GameAdapter.MyViewHolder> 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
 
+            }
+        });
+
+        holder.mDesc.setTextColor(Color.BLUE);
+        holder.mDesc.setHint("توضیح...");
+        holder.mDesc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                CharacterDetail cd = CharacterDetail.newInstance(GameFragment.shakhsiatList[position],
+                        mContext.getString(GameFragment.characterDesc[position]),
+                        GameFragment.characterIcon[position]);
+                FragmentManager fm = mContext.getSupportFragmentManager();
+                MainActivity.replaceFragment(cd, fm, true);
             }
         });
 
