@@ -1,4 +1,4 @@
-package ehsan_hn.github.com.mafia;
+package ehsan_hn.github.com.mafia.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +12,10 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import ehsan_hn.github.com.mafia.GameActivity;
+import ehsan_hn.github.com.mafia.R;
+import ehsan_hn.github.com.mafia.adapter.GameAdapter;
 
 
 public class GameFragment extends Fragment {

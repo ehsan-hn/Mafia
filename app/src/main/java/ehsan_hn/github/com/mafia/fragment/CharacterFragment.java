@@ -1,4 +1,4 @@
-package ehsan_hn.github.com.mafia;
+package ehsan_hn.github.com.mafia.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,6 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import ehsan_hn.github.com.mafia.R;
+import ehsan_hn.github.com.mafia.adapter.CharacterAdapter;
 
 
 public class CharacterFragment extends Fragment {

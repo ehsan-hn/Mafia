@@ -1,4 +1,4 @@
-package ehsan_hn.github.com.mafia;
+package ehsan_hn.github.com.mafia.utility;
 
 /**
  * Created by ehsan on 1/31/17.

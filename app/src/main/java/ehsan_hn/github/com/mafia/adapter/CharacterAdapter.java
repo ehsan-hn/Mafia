@@ -1,4 +1,4 @@
-package ehsan_hn.github.com.mafia;
+package ehsan_hn.github.com.mafia.adapter;
 
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -8,6 +8,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import ehsan_hn.github.com.mafia.MainActivity;
+import ehsan_hn.github.com.mafia.R;
+import ehsan_hn.github.com.mafia.fragment.CharacterDetail;
+import ehsan_hn.github.com.mafia.fragment.GameFragment;
 
 public class CharacterAdapter extends RecyclerView.Adapter<CharacterAdapter.MyViewHolder>
         implements View.OnClickListener {

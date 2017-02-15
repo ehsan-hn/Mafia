@@ -1,13 +1,14 @@
 package ehsan_hn.github.com.mafia;
 
-import android.app.Activity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Random;
+
+import ehsan_hn.github.com.mafia.fragment.GameFragment;
 
 public class GameActivity extends AppCompatActivity {
     ArrayList<String> characterList;

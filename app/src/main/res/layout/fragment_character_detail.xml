@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="10dp"
-    tools:context="ehsan_hn.github.com.mafia.CharacterDetail">
+    tools:context=".fragment.CharacterDetail">
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"

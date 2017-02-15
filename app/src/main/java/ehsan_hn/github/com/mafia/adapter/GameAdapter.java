@@ -1,4 +1,4 @@
-package ehsan_hn.github.com.mafia;
+package ehsan_hn.github.com.mafia.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.CardView;
@@ -16,6 +16,9 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import ehsan_hn.github.com.mafia.R;
+import ehsan_hn.github.com.mafia.utility.CircleTransform;
 
 
 public class GameAdapter extends RecyclerView.Adapter<GameAdapter.MyViewHolder> {

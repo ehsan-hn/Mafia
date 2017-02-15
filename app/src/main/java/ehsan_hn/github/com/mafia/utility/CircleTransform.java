@@ -1,4 +1,4 @@
-package ehsan_hn.github.com.mafia;
+package ehsan_hn.github.com.mafia.utility;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapShader;
