@@ -76,7 +76,7 @@ public class GameAdapter extends RecyclerView.Adapter<GameAdapter.MyViewHolder> 
         });
 
         holder.mDesc.setTextColor(Color.BLUE);
-        holder.mDesc.setHint("توضیح...");
+        holder.mDesc.setText("توضیح...");
         holder.mDesc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
